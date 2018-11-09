@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Automated updates with Violinist.io</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<style>
+		div.link {
+  position: absolute;
+  background: none;
+  color: #fff;
+  bottom: 10px;
+  left: 10px;
+  font-size: 1.5em;
+  font-family: "Lato", sans-serif;
+  z-index: 100;
+}
+div.link a {
+  color: #fff;
+  text-decoration: none;
+}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style>
+			.opacity .inner {
+				background: #000;
+				opacity: .6;
+				padding: 1em 3em;
+			}
+		</style>
+	</head>
+	<body>
+			<div class="link"><a class="tw" href="https://twitter.com/orkj">@orkj: Violinist.io talk</a></div>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown data-background="images/auto.gif">
+## Automated updates with Violinist.io
+
+Eirik Morland / Ny Media AS
+</section>
+<section data-background="images/tf.gif" data-markdown="">
+## About me
+
+- Senior developer and Team leader in Ny Media
+- Masters in art criticism
+- Master of stuffing gifs into a presentation
+- Transparency report: Gif ratio in this presentation: 1:1
+</section>
+<section data-background="images/appl.gif" data-markdown=""></section>
+				<section data-background="images/agenda.gif" class="opacity"><div class="inner" data-markdown="">
+## Agenda
+
+- What does automated updates mean for Drupal?
+- Continuous integration
+- Continuous delivery
+- It's absolutely possible for you to do this!
+- A whole bunch of live demos
+- Putting it all together
+				</div>				</section>
+				<section data-markdown="" data-background="images/chaos.gif">
+## Automated updates with Drupal
+				</section>
+				<section  data-background="images/dauto.gif"><div class="inner" data-markdown="">
+## Automated updates with Drupal
+- Was mentioned by Dries as part of the strategic roadmap of Drupal in his Driesnote at DrupalCon Vienna 2017
+- There is a core initiative for it
+- Has been available in Wordpress for ages
+</div></section>
+				<section data-markdown="" data-background="images/fine.gif">
+## The Wordpress approach
+- Has a range of problems, among them _risk and security_
+- Best suits hobbyists, for example with no version control
+- Not suited for projects with build steps or Continuous Integration
+				</section>
+				<section data-markdown="" data-background="images/CI.gif">
+## Continuous integration
+
+>CI was intended to be used in combination with automated unit tests written through the practices of test-driven development.
+				</section>
+				<section data-markdown="" data-background="images/CD.gif">
+## Continuous delivery
+
+>aims at building, testing, and releasing software with greater speed and frequency.
+				</section>
+				<section data-markdown="" data-background="images/flip.gif">
+# Buzzwords! (╯°□°）╯︵ ┻━┻
+				</section>
+				<section data-markdown="" data-background="images/ld.gif">
+
+				</section>
+				<section data-markdown="" data-background="images/recap.gif">
+# Recap
+
+- Add Continuous integration
+- Add Continuous deployment
+- Add automated updates
+- Add automated PR merge
+- Profit
+				</section>
+				<section data-markdown="" data-background="images/caveats.gif">
+# Caveats
+
+- You have to have good test coverage
+- You might want to target security updates for full automation
+- If an update runs an update hook that creates or changes other files, it will not be fixed for you
+				</section>
+				<section data-markdown="" data-background="images/ty.gif">
+# Thank you!				
+				</section>
+				<section data-markdown="" data-background="images/qs.gif">
+# Questions?
+
+- [@orkj](https://twitter.com/orkj)
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
